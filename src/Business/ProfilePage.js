@@ -8,6 +8,9 @@ const renderMarkup = (options) =>
     <a href='/#login'>На страницу логина</a>
 `
 
+/**
+ * Страница Мой профиль.
+ */
 export class ProfilePage extends Component {
 
     constructor(options) {

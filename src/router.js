@@ -1,3 +1,6 @@
+/**
+ * Класс Роутер. Реализует логику навигации в приложении.
+ */
 export class Router {
 
     constructor (routes) {
@@ -6,6 +9,9 @@ export class Router {
         window.onhashchange = this.hashChanged;
     }
 
+    /**
+     * Обработчик события изменения значения в адресной строке.
+     */
     hashChanged = (event) => {
         if (window.location.hash.length > 0) {
             const routeName = window.location.hash.substr(1);
@@ -15,6 +21,9 @@ export class Router {
         }
     }
 
+    /**
+     * Осуществляет переход на другой роут.
+     */
     navigate = (routeName) => {
         document.getElementById('main').innerHTML = this.routes[routeName].getMarkup();
     }

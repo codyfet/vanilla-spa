@@ -3,7 +3,6 @@
         "env"
     ],
     "plugins": [
-        "transform-class-properties",
-        "transform-runtime"
+        "transform-class-properties"
     ]
 }

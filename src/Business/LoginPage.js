@@ -27,6 +27,9 @@ const renderMarkup = (options) =>
     </form>
 `
 
+/**
+ * Страница ввода логина.
+ */
 export class LoginPage extends Component {
 
     constructor(options) {

@@ -5,6 +5,9 @@ import { ProfilePage } from './Business/ProfilePage.js';
 
 const ROOT_ELEMENT = document.getElementById('main');
 
+/**
+ * Создаём экземпляр роутера.
+ */
 const router = new Router(
     {        
         login: new LoginPage(),

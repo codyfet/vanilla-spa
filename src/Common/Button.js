@@ -5,6 +5,9 @@ const renderMarkup = (options) =>
     <button>${options.text}</button>
 `
 
+/**
+ * Компонент Кнопка.
+ */
 export class Button extends Component {
 
     constructor (options) {
