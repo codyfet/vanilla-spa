@@ -3,8 +3,9 @@
  */
 export class Router {
 
-    constructor (routes) {
+    constructor (routes, rootElement) {
         this.routes = routes;
+        this.rootElement = rootElement;
         this.hashChanged();
         window.onhashchange = this.hashChanged;
     }
@@ -12,20 +13,18 @@ export class Router {
     /**
      * Обработчик события изменения значения в адресной строке.
      */
-    hashChanged = (event) => {
-        if (window.location.hash.length > 0) {
-            const routeName = window.location.hash.substr(1);
-            this.navigate(routeName);
-        } else if (this.routes['login']) {
-            this.navigate('login');
-        }
+    hashChanged = () => {     
+        const routeName = window.location.hash.length > 0
+            ? window.location.hash.substr(1) 
+            : 'default';    
+        this.navigate(routeName);
     }
 
     /**
      * Осуществляет переход на другой роут.
      */
     navigate = (routeName) => {
-        document.getElementById('main').innerHTML = this.routes[routeName].getMarkup();
+        this.rootElement.innerHTML = this.routes[routeName].getMarkup();
     }
 
 }
