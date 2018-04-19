@@ -1,5 +1,3 @@
-import { loadView } from '../utils.js';
-
 /**
  * Класс Компонент, который наследуют все пользовательские компоненты.
  */
@@ -18,6 +16,9 @@ export class Component {
         return this.markup;
     }
 
+    /**
+     * Перерисовывает представление компонента.
+     */
     redraw = (markup) => {
         this.markup = markup;
     }
