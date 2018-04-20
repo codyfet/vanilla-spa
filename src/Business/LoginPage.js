@@ -32,8 +32,8 @@ const renderMarkup = (options) =>
  */
 export class LoginPage extends Component {
 
-    constructor(options) {
-        super(options, renderMarkup(options || {}));
+    constructor(options = {}) {
+        super(options, renderMarkup(options));
     }
 
 }

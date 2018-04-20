@@ -1,5 +1,5 @@
 # vanilla-spa
-Vanilla JS SPA implementation
+Реализация SPA на vanilla.js (es6). 
 
 Для запуска выполнить
 ```

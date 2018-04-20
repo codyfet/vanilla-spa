@@ -1,4 +1,4 @@
-import { Router } from './router.js';
+import { Router } from './Core/Router.js';
 import { Component } from './Core/Component.js';
 import { LoginPage } from './Business/LoginPage.js';
 import { ProfilePage } from './Business/ProfilePage.js';

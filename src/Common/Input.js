@@ -10,8 +10,8 @@ const renderMarkup = (data) =>
  */
 export class Input extends Component {
 
-    constructor (options) {
-        super(options, renderMarkup(options || {}));
+    constructor (options = {}) {
+        super(options, renderMarkup(options));
     }
 
 }

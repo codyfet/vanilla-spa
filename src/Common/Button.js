@@ -10,8 +10,8 @@ const renderMarkup = (options) =>
  */
 export class Button extends Component {
 
-    constructor (options) {
-        super(options, renderMarkup(options || {}));
+    constructor (options = {}) {
+        super(options, renderMarkup(options));
     }
 
 }

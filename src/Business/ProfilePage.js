@@ -13,8 +13,8 @@ const renderMarkup = (options) =>
  */
 export class ProfilePage extends Component {
 
-    constructor(options) {
-        super(options, renderMarkup(options || {}));
+    constructor(options = {}) {
+        super(options, renderMarkup(options));
     }
 
 }
