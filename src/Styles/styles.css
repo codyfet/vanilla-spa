@@ -1,0 +1,38 @@
+body {
+    background: cadetblue;
+}
+
+.login-form-wrapper {
+    width: 360px;
+    padding: 10% 0 0;
+    margin: auto;
+}
+
+.login-form {
+    background: #FFFFFF;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.login-form input {
+    outline: 0;
+    width: 100%;
+    margin: 0 0 15px;
+    padding: 15px;
+    font-size: 14px;
+    border: 0;
+    border-bottom: 1px solid #f2f2f2;
+    box-sizing: border-box;
+}
+
+.login-form button {
+    outline: 0;
+    width: 100%;
+    background: #F44336;
+    color: #FFFFFF;
+    border: 0;
+    padding: 15px;
+    font-size: 14px;
+    cursor: pointer;
+}

@@ -1,8 +1,13 @@
 import { Component } from '../Core/Component.js';
 
-const renderMarkup = (data) => 
+const renderMarkup = (options) => 
 `
-    <input type='text' value='${data.value || ''}' name='${data.name}' />
+    <input 
+        type='text' 
+        value='${options.value || ''}' 
+        ${options.name ? 'name=' + options.name : ''} 
+        ${options.placeholder ? 'placeholder=' + options.placeholder : ''}
+    />
 `
 
 /**

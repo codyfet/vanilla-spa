@@ -3,6 +3,8 @@ import { Component } from './Core/Component.js';
 import { LoginPage } from './Business/LoginPage.js';
 import { ProfilePage } from './Business/ProfilePage.js';
 
+import './Styles/styles.css';
+
 /**
  * Создаём экземпляр роутера.
  */

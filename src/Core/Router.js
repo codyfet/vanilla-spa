@@ -28,7 +28,8 @@ export class Router {
      * Осуществляет переход на другой роут.
      */
     navigate = (routeName) => {
-        this.rootElement.innerHTML = this.routes[routeName].getMarkup();
+        this.rootElement.innerHTML = "";
+        this.rootElement.appendChild(this.routes[routeName].getElement());
     }
 
 }

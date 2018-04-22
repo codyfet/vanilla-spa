@@ -2,29 +2,32 @@ import { Component } from '../Core/Component.js';
 import { Button } from '../Common/Button.js';
 import { Input } from '../Common/Input.js';
 
-const renderMarkup = (options) => 
+const renderMarkup = (options) =>
 `
-    <form class='login-form'>
-        <label>Форма логина</label>
-        ${
-            new Input({
-                name: 'login', 
-                value: options.password
-            }).getMarkup()
-        }
-        ${
-            new Input({
-                name: 'password', 
-                value: options.password
-            }).getMarkup()
-        }
-        ${
-            new Button({
-                text: 'Отправить'
-            }).getMarkup()
-        }
-        <a href='/#profile'>На страницу профиля</a>
-    </form>
+    <div class='login-form-wrapper'>
+        <div class='login-form'>
+            ${
+                new Input({
+                    name: 'username', 
+                    placeholder: "username",
+                    value: options.username
+                }).getMarkup()
+            }
+            ${
+                new Input({
+                    name: 'password', 
+                    placeholder: "password",
+                    value: options.password
+                }).getMarkup()
+            }
+            ${
+                new Button({
+                    text: 'Login',
+                    id: 'login'
+                }).getMarkup()
+            }
+        </div>
+    </div>
 `
 
 /**
@@ -34,6 +37,13 @@ export class LoginPage extends Component {
 
     constructor(options = {}) {
         super(options, renderMarkup(options));
+
+        // Пример добавления обработчика события нажатие на кнопку "Login".
+        this.element.querySelector('#login').addEventListener('click', this.handleLoginButtonClick)
+    }
+
+    handleLoginButtonClick = () => {
+        window.location.hash = '#profile';
     }
 
 }

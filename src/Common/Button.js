@@ -2,7 +2,7 @@ import { Component } from '../Core/Component.js';
 
 const renderMarkup = (options) => 
 `
-    <button>${options.text}</button>
+    <button ${options.id ? 'id=' + options.id : ''}>${options.text || ''}</button>
 `
 
 /**
